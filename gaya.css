@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+}
+h1{
+    background : blueviolet;
+    width:13;
+}
+
+h2{
+    padding:50px ;
+}
+
+.rumus{
+    font-family : 'Times New Roman', Times, serif ;
+    text-align : left;
+    font : 2px;
+
+}
+#result {
+    margin-top: 20px;
+}
+
+img {
+    padding : 120px;
+}
+label{
+    padding : 30px;
+}
+
+p{
+    text-align : left;
+}

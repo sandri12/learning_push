@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gaya.css" />
+    <title>Kalkulator Segitiga</title>
+</head>
+<body>
+
+    <h1> Kalkulator Segitiga </h1>
+
+    <img src="segitiga1.png"> <br/>
+    <div  class="rumus">
+    <h3> rumus luas segitiga yaitu :</h3>
+    <h3> L = 1/2 X alas X tinggi </h3>
+    <h3> dimana :</h3>
+    <h3> L = luas</h3>
+    <h3> b = alas</h3>
+    <h3> a = tinggi </h3>
+    </div>
+    <h2><label for="alas">Alas: </label>
+    <input type="number" id="alas" placeholder="Masukkan alas"> <br/>
+
+    <label for="tinggi">Tinggi: </label>
+    <input type="number" id="tinggi" placeholder="Masukkan tinggi"> <br/>
+    </h2>
+
+    <h3><label for="sisia">Sisi a : </label>
+    <input type="number" id="sisi1" placeholder="Masukkan sisi 1"> <br/>
+
+    <label for="sisib">Sisi b: </label>
+    <input type="number" id="sisi2" placeholder="Masukkan sisi 2"><br/>
+
+    <label for="sisic">Sisi c: </label>
+    <input type="number" id="sisi3" placeholder="Masukkan sisi 3"><br/>
+    </h3>
+
+    <button onclick="hitung()">Hitung</button>
+
+    <div id="result"></div>
+
+  <script>
+  function hitung() {
+        var alas = parseFloat(document.getElementById('alas').value);
+        var tinggi = parseFloat(document.getElementById('tinggi').value);
+        var sisi1 = parseFloat(document.getElementById('sisi1').value);
+        var sisi2 = parseFloat(document.getElementById('sisi2').value);
+        var sisi3 = parseFloat(document.getElementById('sisi3').value);
+
+        if (!alas || !tinggi || !sisi1 || !sisi2 || !sisi3) {
+            alert('Masukkan semua nilai sisi dan tinggi');
+            return;
+        }
+
+        var luas = 0.5 * alas * tinggi;
+        var keliling = sisi1 + sisi2 + sisi3;
+
+        document.getElementById('result').innerHTML = `
+            <p>Luas segitiga: ${luas}</p>
+            <p>Keliling segitiga: ${keliling}</p>
+        `;
+      }
+    </script>  
+      
+</body>
+</html>
